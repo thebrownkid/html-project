@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Container holding the season boxes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styles for each season box */
+.season-box {
+    flex: 50%;
+    height: 45vh;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Text style inside each season box */
+.season-box p {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    line-height: 50vh;
+    font-size: 2em;
+    color: #fff;
+}
+
+/* Specific styles and colors for each season */
+#spring {
+    background-color: #A2D9CE;
+}
+
+#spring:hover {
+    background-image: url('./images/spring.jpg');
+    background-size: cover;
+}
+
+#summer {
+    background-color: #FAD02E;
+}
+
+#summer:hover {
+    background-image: url('./images/summer.jpg');
+    background-size: cover;
+}
+
+#autumn {
+    background-color: #D35400;
+}
+
+#autumn:hover {
+    background-image: url('./images/fall.jpg');
+    background-size: cover;
+}
+
+#winter {
+    background-color: #85C1E9;
+}
+
+#winter:hover {
+    background-image: url('./images/winter.jpg');
+    background-size: cover;
+}
+
+/* Hover effect for season boxes */
+.season-box:hover {
+    opacity: 0.9;
+}
+
+
+
+
+.content-wrapper {
+    display: flex;
+}
+
+.image-side {
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+    width: 50%; /* Half of viewport width */
+    overflow: hidden; /* Hide the overflow */
+}
+
+.image-side img, .image-side video {
+    width: 100%; /* Cover the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 100%; /* Minimum height to 100% */
+    object-fit: cover; /* Cover the viewport without distorting the aspect ratio */
+}
+
+.poem {
+    flex: 1;
+    margin-left: 50%; /* Adjust the left margin to accommodate the video */
+    padding: 20px;
+    padding-top: 70px; /* Adjust the top padding to accommodate the nav, 50px (nav height) + 20px (existing padding) */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+nav {
+    padding: 10px 0; /* Providing equal padding at the top and bottom */
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensuring nav stays on top */
+}
+
+nav a {
+    color: #fff;
+    margin: 15px 15px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 1.2em; /* Larger font size */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: rgba(48, 48, 48, 0.2); /* Slightly lighter background on hover */
+}
